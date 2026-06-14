@@ -141,37 +141,7 @@ Stores accepted team members.
 
 ---
 
-## Installation
 
-### Clone Repository
-
-```bash
-git clone https://github.com/KurraRaviKiran/project-collaboration-hub.git
-cd project-collaboration-hub
-```
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Configure Environment Variables
-
-Create a `.env` file:
-
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### Start Development Server
-
-```bash
-npm run dev
-```
-
----
 
 ## Future Enhancements
 
