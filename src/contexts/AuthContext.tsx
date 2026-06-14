@@ -118,14 +118,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  const fetchProfile = async (userId: string) => {
-    console.debug('fetchProfile: start for', userId);
+  const fetchProfile = async (userId: string) => {    console.debug('fetchProfile: start for', userId);
     try {
-      const { data, error } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', userId)
-        .single();
+     console.log('START fetchProfile', userId);
+
+const { data, error } = await supabase
+  .from('profiles')
+  .select('*')
+  .eq('id', userId);
+
+console.log('PROFILE DATA:', data);
+console.log('PROFILE ERROR:', error);
+
+setProfile(data?.[0] ?? null);
 
       console.debug('fetchProfile: result', { data, error });
 
